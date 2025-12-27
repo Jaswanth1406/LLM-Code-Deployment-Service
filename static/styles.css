@@ -1,0 +1,19 @@
+:root{--bg:#f6f8fa;--card:#fff;--muted:#6b7280;--accent:#2563eb}
+*{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.container{max-width:1100px;margin:24px auto;padding:16px}
+.site-header{background:linear-gradient(90deg,#fff,#f8fafc);padding:20px 0;border-bottom:1px solid #e6eef6}
+.site-header h1{margin:0;font-size:22px}
+.grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+.panel{background:var(--card);padding:18px;border-radius:8px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.form-panel label{display:block;margin-bottom:12px}
+.form-panel input,.form-panel textarea{width:100%;padding:8px;border:1px solid #d1d5db;border-radius:6px}
+.row{display:flex;gap:10px}
+.row label{flex:1}
+.actions{display:flex;gap:8px;margin-top:8px}
+button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.muted{background:#eef2ff;color:#334155}
+.status-panel #status{min-height:80px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+#preview iframe{width:100%;height:300px;border:0}
+.checkbox{display:flex;align-items:center}
+.checkbox input{margin-right:8px}

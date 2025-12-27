@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LLM Code Deployment</title>
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>LLM Code Deployment</h1>
+        <p>Automated code generation and GitHub Pages deployment</p>
+      </div>
+    </header>
+
+    <main class="container grid">
+      <section class="panel form-panel">
+        <h2>Deployment Request</h2>
+        <form id="deploy-form">
+          <label>Email<input type="email" id="email" value="test@example.com" required></label>
+          <label>Secret<input type="text" id="secret"></label>
+          <div class="row">
+            <label>Task ID<input type="text" id="task" value="demo-app"></label>
+            <label>Round<input type="number" id="round" value="1" min="1"></label>
+          </div>
+          <label>Brief<textarea id="brief">Create a simple calculator with basic arithmetic operations</textarea></label>
+          <label>Checks (JSON array)<textarea id="checks">["typeof add === 'function'", "typeof subtract === 'function'"]</textarea></label>
+          <label>Evaluation URL<input type="url" id="evaluation_url" placeholder="http://127.0.0.1:9000/eval"></label>
+          <label>Attachments (JSON array)<textarea id="attachments">[]</textarea></label>
+          <label class="checkbox"><input type="checkbox" id="wait_for_result"> Wait for result (testing)</label>
+          <div class="actions">
+            <button id="submit">Deploy</button>
+            <button id="clear" type="button" class="muted">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel status-panel">
+        <h2>Deployment Status</h2>
+        <div id="status">No deployment in progress</div>
+
+        <h2>Preview</h2>
+        <div id="preview">Preview will appear after deployment</div>
+      </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
